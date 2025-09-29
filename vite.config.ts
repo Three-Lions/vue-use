@@ -2,7 +2,7 @@
  * @Author: lxjie 2621201615@qq.com
  * @Date: 2025-09-29 10:34:28
  * @LastEditors: lxjie 2621201615@qq.com
- * @LastEditTime: 2025-09-29 11:32:22
+ * @LastEditTime: 2025-09-29 13:58:29
  * @FilePath: /vue-use/vite.config.ts
  * @Description: 这是默认设置,请设置`customMade`, 打开koroFileHeader查看配置 进行设置: https://github.com/OBKoro1/koro1FileHeader/wiki/%E9%85%8D%E7%BD%AE
  */
@@ -56,7 +56,7 @@ export default defineConfig(({ mode }) => {
       rollupOptions: {
         output: {
           manualChunks: {
-            vue: ['vue', 'vue-router', 'vuex'], // 提取核心依赖
+            vue: ['vue', 'vue-router'], // 提取核心依赖
           },
         },
       },
@@ -79,11 +79,12 @@ export default defineConfig(({ mode }) => {
       modules: {
         localsConvention: 'camelCaseOnly', // CSS Modules 命名规范
       },
+      postcss: './postcss.config.js',
     },
 
     // 优化依赖
     optimizeDeps: {
-      include: ['vue', 'vuex', 'vue-router'],
+      include: ['vue', 'vue-router'],
     },
 
     // 自定义环境变量访问
