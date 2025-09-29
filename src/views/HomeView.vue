@@ -14,6 +14,7 @@ import HelloWorld from '@/components/HelloWorld.vue'
 
     <h1 class="text-3xl font-bold underline text-blue-600">Hello, Tailwind CSS!</h1>
     <p class="mt-4 text-gray-700">如果这个段落和标题的样式改变，说明配置成功。</p>
-    <h1 class="text-3xl font-bold underline">Hello world!</h1>
+    <h1 class="text-3xl font-bold underline">页面主题配置</h1>
+    <h1 class="text-3xl font-bold underline">测试合分支</h1>
   </main>
 </template>
