@@ -7,16 +7,15 @@
     "node": "^20.19.0 || >=22.12.0"
   },
   "scripts": {
-    "dev": "vite",
-    "build": "run-p type-check \"build-only {@}\" --",
+    "dev": "vite --open",
+    "build": "vue-tsc --noEmit && vite build",
     "preview": "vite preview",
-    "build-only": "vite build",
-    "type-check": "vue-tsc --build",
     "lint": "eslint . --fix",
-    "format": "prettier --write src/",
-    "prepare": "husky"
+    "lint:prettier": "prettier --write \"**/*.{js,cjs,ts,json,tsx,css,less,scss,vue,html,md}\"",
+    "prepare": "husky install"
   },
   "dependencies": {
+    "@tailwindcss/vite": "^4.1.17",
     "ant-design-vue": "4.x",
     "pinia": "^3.0.3",
     "vue": "^3.5.18",
@@ -48,10 +47,28 @@
     "vue-tsc": "^3.0.4"
   },
   "lint-staged": {
-    "*.{js,ts,vue}": [
-      "eslint --fix",
+    "*.{js,ts,mjs,mts,tsx}": [
+      "prettier --write",
+      "eslint --fix"
+    ],
+    "*.{cjs,json,jsonc}": [
       "prettier --write"
     ],
-    "*.{css,scss}": "prettier --write"
+    "*.vue": [
+      "prettier --write",
+      "eslint --fix"
+    ],
+    "*.{html,htm}": [
+      "prettier --write"
+    ],
+    "*.{scss,css,less}": [
+      "prettier --write"
+    ],
+    "*.{md,mdx}": [
+      "prettier --write"
+    ],
+    "*.{yaml,yml}": [
+      "prettier --write"
+    ]
   }
 }

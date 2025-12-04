@@ -1,5 +1,11 @@
 <script setup lang="ts">
-import HelloWorld from '@/components/HelloWorld.vue'
+  import HelloWorld from '@/components/HelloWorld.vue'
+  const name =
+    'vue-use分手大师发啊沙发斯蒂芬都发啥打法是放大是的发生的方法撒大声地发都发飒飒代发撒大声地发啊似懂非懂发SSD发电风扇水电费手动阀阿斯达发撒打法是打发打发撒打发谁是的是的发阿斯顿法师打发发撒打发打撒反反复复防守打法手动阀三大发啥打法'
+  const a = { v: 1, n: 2 }
+  const b = (x: number) => x + 1
+  const longArray = ['item1', 'item2', 'item3']
+  console.log(name, a, b(1), longArray)
 </script>
 
 <template>
