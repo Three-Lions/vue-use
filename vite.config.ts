@@ -37,7 +37,7 @@ export default ({ mode }: { mode: string }) => {
       tailwindcss(),
       AutoImport({
         imports: ['vue', 'vue-router', 'pinia', '@vueuse/core'],
-        dts: true,
+        dts: './auto-imports.d.ts',
       }),
       viteCompression({
         verbose: false, // 是否在控制台输出压缩结果
