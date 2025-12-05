@@ -14,7 +14,8 @@
     "lint:prettier": "prettier --write .",
     "prepare": "husky install",
     "lint:staged": "lint-staged",
-    "release": "standard-version"
+    "release": "standard-version",
+    "lint:stylelint": "stylelint  \"**/*.{css,scss,vue}\" --fix"
   },
   "dependencies": {
     "@tailwindcss/vite": "^4.1.17",
@@ -43,7 +44,16 @@
     "lint-staged": "^16.2.1",
     "npm-run-all2": "^8.0.4",
     "postcss": "^8.5.6",
+    "postcss-html": "^1.8.0",
+    "postcss-scss": "^4.0.9",
     "prettier": "3.6.2",
+    "sass": "^1.94.2",
+    "stylelint": "^16.26.1",
+    "stylelint-config-html": "^1.1.0",
+    "stylelint-config-recess-order": "^7.4.0",
+    "stylelint-config-recommended-scss": "^16.0.2",
+    "stylelint-config-recommended-vue": "^1.6.1",
+    "stylelint-config-standard": "^39.0.1",
     "tailwindcss": "^3.4.17",
     "terser": "^5.36.0",
     "typescript": "~5.8.0",
@@ -62,6 +72,7 @@
       "prettier --write"
     ],
     "*.vue": [
+      "stylelint --fix --allow-empty-input",
       "prettier --write",
       "eslint --fix --max-warnings=0"
     ],
@@ -69,6 +80,7 @@
       "prettier --write"
     ],
     "*.{scss,css,less}": [
+      "stylelint --fix --allow-empty-input",
       "prettier --write"
     ],
     "*.{md,mdx}": [
