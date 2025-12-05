@@ -11,8 +11,9 @@
     "build": "vue-tsc --noEmit && vite build",
     "preview": "vite preview",
     "lint": "eslint . --fix",
-    "lint:prettier": "prettier --write \"**/*.{js,cjs,ts,json,tsx,css,less,scss,vue,html,md}\"",
-    "prepare": "husky install"
+    "lint:prettier": "prettier --write .",
+    "prepare": "husky install",
+    "lint:staged": "lint-staged"
   },
   "dependencies": {
     "@tailwindcss/vite": "^4.1.17",
@@ -53,14 +54,14 @@
   "lint-staged": {
     "*.{js,ts,mjs,mts,tsx}": [
       "prettier --write",
-      "eslint --fix"
+      "eslint --fix --max-warnings=0"
     ],
     "*.{cjs,json,jsonc}": [
       "prettier --write"
     ],
     "*.vue": [
       "prettier --write",
-      "eslint --fix"
+      "eslint --fix --max-warnings=0"
     ],
     "*.{html,htm}": [
       "prettier --write"

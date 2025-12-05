@@ -3,13 +3,13 @@
 export default {
   content: [
     './index.html',
-    './src/**/*.{vue,js,ts,jsx,tsx}', // 确保包含你的项目文件类型:cite[1]:cite[3]:cite[6]
+    './src/**/*.{vue,js,ts,jsx,tsx}' // 确保包含你的项目文件类型:cite[1]:cite[3]:cite[6]
   ],
   theme: {
-    extend: {},
+    extend: {}
   },
   corePlugins: {
-    preflight: false,
+    preflight: false
   },
-  plugins: [],
+  plugins: []
 }

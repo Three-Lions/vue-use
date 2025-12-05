@@ -37,7 +37,7 @@ export default ({ mode }: { mode: string }) => {
       tailwindcss(),
       AutoImport({
         imports: ['vue', 'vue-router', 'pinia', '@vueuse/core'],
-        dts: './auto-imports.d.ts',
+        dts: './auto-imports.d.ts'
       }),
       viteCompression({
         verbose: false, // 是否在控制台输出压缩结果
@@ -46,15 +46,15 @@ export default ({ mode }: { mode: string }) => {
         ext: '.gz', // 压缩后的文件名后缀
         threshold: 10240, // 只有大小大于该值的资源会被处理 10240B = 10KB
         deleteOriginFile: false // 压缩后是否删除原文件
-      }),
+      })
     ],
     css: {
-      postcss: './postcss.config.js',
+      postcss: './postcss.config.js'
     },
     resolve: {
       alias: {
-        '@': fileURLToPath(new URL('./src', import.meta.url)),
-      },
+        '@': fileURLToPath(new URL('./src', import.meta.url))
+      }
     },
     build: {
       target: 'es2015',
@@ -74,6 +74,6 @@ export default ({ mode }: { mode: string }) => {
         exclude: [],
         include: ['src/views/**/*.vue']
       }
-    },
+    }
   })
 }

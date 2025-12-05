@@ -14,10 +14,10 @@ module.exports = {
         'refactor', // 代码重构
         'test', // 测试相关
         'chore', // 构建过程或辅助工具变动
-        'revert', // 回滚提交
-      ],
+        'revert' // 回滚提交
+      ]
     ],
     // 其他规则示例：主题（subject）不能为空
-    'subject-empty': [2, 'never'],
-  },
+    'subject-empty': [2, 'never']
+  }
 }
