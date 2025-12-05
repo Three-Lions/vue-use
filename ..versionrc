@@ -1,0 +1,9 @@
+{
+  "header": "更新日志",
+  "types": [
+    {"type": "feat", "section": "✨ 新功能"},
+    {"type": "fix", "section": "🐛 问题修复"},
+    {"type": "docs", "section": "📝 文档", "hidden": false},
+    {"type": "chore", "section": "🔧 构建/工具", "hidden": false}
+  ]
+}
