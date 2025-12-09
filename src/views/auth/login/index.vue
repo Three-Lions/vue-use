@@ -1,6 +1,7 @@
+
 <template>
-  <div>
-    我是登录页面++++++++
+  <div class="w-full h-full flex justify-center items-center" >
+    我是登录页面
   </div>
 </template>
 <script setup lang="ts">
